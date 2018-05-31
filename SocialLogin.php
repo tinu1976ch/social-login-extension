@@ -65,7 +65,11 @@ class AAM_SocialLogin extends AAM_Backend_Feature_Abstract {
      * 
      */
     public function renderUI() {
-        require __DIR__ . '/phtml/social.phtml';
+        $tmpl = apply_filters(
+                'aam-social-login-tmpl-filter', __DIR__ . '/phtml/social.phtml'
+        );
+        
+        require $tmpl;
     }
     
     /**
@@ -86,7 +90,9 @@ class AAM_SocialLogin extends AAM_Backend_Feature_Abstract {
                     ), 
                     home_url()
                 ),
-                'providers' => AAM_Core_Config::get('login.social.providers', array())
+                'providers' => AAM::api()->getConfig(
+                        'feature.socialLogin.providers', array()
+                )
             );
             
             try {

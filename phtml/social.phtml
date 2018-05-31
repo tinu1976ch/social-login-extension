@@ -1,15 +1,18 @@
 <label>or login with:</label>
 <div style="padding: 10px 0; width: 100%; margin-bottom: 20px;">
-    <?php if (AAM_Core_Config::get('login.social.providers.Facebook.enabled', false)) { ?>
+    <?php if (AAM_Core_Config::get('feature.socialLogin.providers.Facebook.enabled', false)) { ?>
         <a href="<?php echo $this->getLink('facebook'); ?>" style="margin-left: 10px;" class="aam-social-login" data-social-adapter="facebook"><img height="28" width="28" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg" /></a>
     <?php } ?>
-    <?php if (AAM_Core_Config::get('login.social.providers.Twitter.enabled', false)) { ?>
+    <?php if (AAM_Core_Config::get('feature.socialLogin.providers.Twitter.enabled', false)) { ?>
         <a href="<?php echo $this->getLink('twitter'); ?>" style="margin-left: 10px;" class="aam-social-login" data-social-adapter="twitter"><img height="28" width="28" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" /></a>
     <?php } ?>
-    <?php if (AAM_Core_Config::get('login.social.providers.LinkedIn.enabled', false)) { ?>
+    <?php if (AAM_Core_Config::get('feature.socialLogin.providers.LinkedIn.enabled', false)) { ?>
         <a href="<?php echo $this->getLink('linkedIn'); ?>" style="margin-left: 10px;" class="aam-social-login" data-social-adapter="linkedIn"><img height="28" width="28" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" /></a>
     <?php } ?>
-    <?php if (AAM_Core_Config::get('login.social.providers.Instagram.enabled', false)) { ?>
+    <?php if (AAM_Core_Config::get('feature.socialLogin.providers.Instagram.enabled', false)) { ?>
         <a href="<?php echo $this->getLink('instagram'); ?>" style="margin-left: 10px;" class="aam-social-login" data-social-adapter="instagram"><img height="28" width="28" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" /></a>
+    <?php } ?>
+        <?php if (AAM_Core_Config::get('feature.socialLogin.providers.Google.enabled', false)) { ?>
+        <a href="<?php echo $this->getLink('google'); ?>" style="margin-left: 10px;" class="aam-social-login" data-social-adapter="google"><img height="28" width="28" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/google.svg" /></a>
     <?php } ?>
 </div>
