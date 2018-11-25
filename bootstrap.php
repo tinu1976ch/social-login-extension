@@ -20,7 +20,7 @@
 if (defined('AAM_KEY') && !defined('AAM_SOCIAL_LOGIN')) {
     $config = require(dirname(__FILE__) . '/config.php');
     
-    if (version_compare(PHP_VERSION, $config['require']['php']) >= 0) {
+    if (version_compare(PHP_VERSION, $config['requires']['php']) >= 0) {
         if (version_compare(AAM_Core_API::version(), '5.3.1') === -1) {
             AAM_Core_Console::add(
                 '[Plus Package] extension requires AAM 5.3.1 or higher.', 'b'
@@ -39,7 +39,7 @@ if (defined('AAM_KEY') && !defined('AAM_SOCIAL_LOGIN')) {
         }
     } else {
         AAM_Core_Console::add(
-            "[Social Login] extension requires PHP {$config['require']['php']} or higher.", 'b'
+            "[Social Login] extension requires PHP {$config['requires']['php']} or higher.", 'b'
         );
     }
 }

@@ -18,9 +18,10 @@
  */
 
 return array(
-    'version' => '0.2',
+    'version' => '0.2.1',
     'id'      => 'AAM_SOCIAL_LOGIN',
-    'require' => array(
-        'php' => '5.4'
+    'requires' => array(
+        'php' => '5.4',
+        'aam' => '5.6.1.1'
     )
 );
